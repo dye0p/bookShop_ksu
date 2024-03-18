@@ -10,6 +10,7 @@ public class HomeController {
     @GetMapping("/")
     public String homeP(Model model) {
 
+        //사용자 이름
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         model.addAttribute("username", username); //사용자 이름
